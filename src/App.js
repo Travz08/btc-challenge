@@ -3,14 +3,14 @@ import {
   Route,
 } from 'react-router-dom';
 import UserProfiles from './pages/UserProfiles'
+import AddUserProfile from './pages/AddUserProfile'
 import './App.scss';
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
         <Route exact path="/" component={UserProfiles} />
-      </div>
+        <Route exact path="/edit" component={AddUserProfile} />
     </BrowserRouter>
   );
 }

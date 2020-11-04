@@ -1,6 +1,27 @@
 .userProfiles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: #f2f2f2;
+    &__add {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        margin-top: 30px;
+        margin-left: 30px;
+        
+        background: linear-gradient(135deg, #F395BA 0%, #FED182 100%);
+        border-radius: 50%;
+        border: 5px solid black;
+        width: 60px;
+        height: 60px;
+        &__icon {
+            width: 35px;
+        }
+    }
+
+    &__cardContainer {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

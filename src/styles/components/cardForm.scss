@@ -1,0 +1,23 @@
+.cardForm {
+    &__firstName {
+        &__input {
+            border: none;
+            border-bottom: 1px solid black;
+        }
+    }
+
+    &__detail {
+        &__input {
+            border: none;
+            border-bottom: 1px solid black;
+            margin-left: 15px;
+        }
+    }
+    &__company {
+        &__input {
+            border: none;
+            border-bottom: 1px solid black;
+            margin-bottom: 8px;
+        }
+    }
+}

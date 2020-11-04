@@ -1,29 +1,17 @@
 import React from 'react';
-import faker from 'faker';
 import { ReactComponent as Mail } from '../../assets/icons/mail.svg'
 import { ReactComponent as AddressBook } from '../../assets/icons/addressBook.svg'
 import { ReactComponent as Phone } from '../../assets/icons/phone.svg'
 import { ReactComponent as Website } from '../../assets/icons/website.svg'
 
 const classNameSpace = 'card';
-const profile = {
-    image: faker.image.avatar(),
-    name: faker.name.findName(),
-    email: faker.internet.email(),
-    address: faker.address.streetAddress(),
-    website: faker.internet.url(),
-    phoneNumber: faker.phone.phoneNumber(),
-    company: faker.company.companyName(),
-    companyCatchPhrase: faker.company.catchPhrase(),
-    companyImage: faker.image.business()
-}
 
-const Card = () => {
+const Card = ({ profile }) => {
     return (
         <div className={classNameSpace}>
             <div className={`${classNameSpace}__imageContainer`}>
                 <div className={`${classNameSpace}__imageContainer__image`}>
-                    <img src={profile.image}/>
+                    <img src={profile.image} alt="User Avatar"/>
                 </div>
             </div>
             <div className={`${classNameSpace}__infoContainer`}>
@@ -48,7 +36,7 @@ const Card = () => {
                 </div>
                 <div className={`${classNameSpace}__infoContainer__company`}>
                     <div className={`${classNameSpace}__infoContainer__company__image`}>
-                        <img src={profile.companyImage}/>
+                        <img src={profile.companyImage} alt="Company Avatar"/>
                     </div>
                     <div className={`${classNameSpace}__infoContainer__company__detail`}>
                         <div className={`${classNameSpace}__infoContainer__company__detail__name`}>
